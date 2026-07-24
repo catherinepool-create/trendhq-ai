@@ -516,6 +516,23 @@
       height: auto;
       aspect-ratio: 16 / 9;
     }
+    /* YouTube embed — responsive 16:9 */
+    .yt-embed {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #0d0d0d;
+    }
+    .yt-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
     @media (min-width: 900px) {
       .cards-grid.grid-2 { grid-template-columns: 1fr 1fr; }
@@ -707,14 +724,18 @@
     <h2 class="section-heading reveal">Short Films <span class="gold-underline"></span></h2>
     <div class="filter-bar reveal" data-filter-target="short-films-grid">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="Cinematic">Cinematic</button>
       <button class="filter-btn" data-filter="Drama">Drama</button>
+      <button class="filter-btn" data-filter="Cinematic">Cinematic</button>
       <button class="filter-btn" data-filter="Documentary">Documentary</button>
     </div>
     <div class="cards-grid grid-2" id="short-films-grid">
 
       <article class="card reveal" data-category="Cinematic">
-        <video src="./assets/going-down-updated-watermarked.mp4#t=0.001" poster="./assets/going-down-updated-watermarked-poster.jpg" controls playsinline preload="metadata"></video>
+        <!-- TODO: upload Going Down to YouTube and replace bFDN6CpnnPo -->
+        <div class="yt-embed">
+          <iframe src="https://www.youtube.com/embed/bFDN6CpnnPo?rel=0&modestbranding=1"
+            title="Going Down" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <h3 class="card-title">Going Down</h3>
         <p>A blue-hour architectural study shot at dusk. The city becomes character — reflections on wet pavement, glowing windows, the geometry of modern high-rises.</p>
         <div class="chips">
@@ -725,7 +746,11 @@
       </article>
 
       <article class="card reveal" data-category="Drama">
-        <video src="./assets/the-room-short-film-watermarked.mp4#t=0.001" poster="./assets/the-room-short-film-watermarked-poster.jpg" controls playsinline preload="metadata"></video>
+        <!-- TODO: upload The Room to YouTube and replace SxWG75UpGRQ -->
+        <div class="yt-embed">
+          <iframe src="https://www.youtube.com/embed/SxWG75UpGRQ?rel=0&modestbranding=1"
+            title="The Room" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <h3 class="card-title">The Room</h3>
         <p>A psychological drama wrapped in warm amber light. Silhouette, shadow, and the weight of what's left unsaid — shot in a single hotel suite that becomes a world.</p>
         <div class="chips">
@@ -736,13 +761,79 @@
       </article>
 
       <article class="card reveal" data-category="Documentary">
-        <video src="./assets/the-thing-left-behind-mov-watermarked.mp4#t=0.001" poster="./assets/the-thing-left-behind-mov-watermarked-poster.jpg" controls playsinline preload="metadata"></video>
+        <!-- TODO: upload The Thing Left Behind to YouTube and replace DKCIsX9fhF8 -->
+        <div class="yt-embed">
+          <iframe src="https://www.youtube.com/embed/DKCIsX9fhF8?rel=0&modestbranding=1"
+            title="The Thing Left Behind" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <h3 class="card-title">The Thing Left Behind</h3>
         <p>A documentary-style interview piece exploring presence and absence. Clean, studio-grade production with an intimate conversational core.</p>
         <div class="chips">
           <span class="chip">Documentary</span>
           <span class="chip">Interview</span>
           <span class="chip">Studio</span>
+        </div>
+      </article>
+
+      <!-- ── NEW FILMS — replace YOUTUBE_ID_x with real IDs when uploaded ── -->
+
+      <article class="card reveal" data-category="Drama">
+        <!-- TODO: replace YOUTUBE_ID_1 with The Last Patient YouTube video ID -->
+        <div class="yt-embed">
+          <iframe src="https://www.youtube.com/embed/mqOSEz-Dq3o?rel=0&modestbranding=1"
+            title="The Last Patient" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h3 class="card-title">The Last Patient</h3>
+        <p>A tense, intimate drama set at the intersection of medicine and memory. Every frame built to compress time — and the weight of what can't be saved.</p>
+        <div class="chips">
+          <span class="chip">Drama</span>
+          <span class="chip">AI Short Film</span>
+          <span class="chip">Higgsfield</span>
+        </div>
+      </article>
+
+      <article class="card reveal" data-category="Drama">
+        <!-- TODO: replace YOUTUBE_ID_2 with Visiting Hours YouTube video ID -->
+        <div class="yt-embed">
+          <iframe src="https://www.youtube.com/embed/YBV26utxaQM?rel=0&modestbranding=1"
+            title="Visiting Hours" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h3 class="card-title">Visiting Hours</h3>
+        <p>A cinematic short about presence, absence, and the time between. Visceral close-quarters framing with a single unbroken emotional through-line.</p>
+        <div class="chips">
+          <span class="chip">Drama</span>
+          <span class="chip">AI Short Film</span>
+          <span class="chip">Seedance 2.0</span>
+        </div>
+      </article>
+
+      <article class="card reveal" data-category="Drama">
+        <!-- TODO: replace YOUTUBE_ID_3 with Good Girl YouTube video ID -->
+        <div class="yt-embed">
+          <iframe src="https://www.youtube.com/embed/w3DlrGniZlg?rel=0&modestbranding=1"
+            title="Good Girl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h3 class="card-title">Good Girl</h3>
+        <p>A character study in compliance and revolt. Quiet, controlled until it isn't — the story of a woman performing the role assigned to her and the moment she stops.</p>
+        <div class="chips">
+          <span class="chip">Drama</span>
+          <span class="chip">AI Short Film</span>
+          <span class="chip">Higgsfield</span>
+        </div>
+      </article>
+
+      <article class="card reveal" data-category="Cinematic">
+        <!-- TODO: replace W8nMYxplqkU with Same Hands YouTube video ID -->
+        <div class="yt-embed">
+          <iframe src="https://www.youtube.com/embed/W8nMYxplqkU?rel=0&modestbranding=1"
+            title="Same Hands" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h3 class="card-title">Same Hands</h3>
+        <p>A meditation on inheritance and gesture. The hands that built something pass it forward — a short film about what we carry without knowing we carry it.</p>
+        <div class="chips">
+          <span class="chip">Cinematic</span>
+          <span class="chip">AI Short Film</span>
+          <span class="chip">Seedance 2.0</span>
         </div>
       </article>
 
